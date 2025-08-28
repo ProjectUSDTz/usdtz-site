@@ -1,0 +1,29 @@
+TERMS TO MARKET (TTM) – USDTZ (Tether USD Bridged ZED20)
+
+1. Overview
+USDTZ è un token BEP-20 su Binance Smart Chain (BSC), con fornitura totale di 1 miliardo di unità.
+È concepito per simulazioni di mercato, collateralizzazione e utilizzo in transazioni OTC dimostrative.
+
+2. Tokenomics
+- Total Supply: 1,000,000,000 USDTZ
+- Decimals: 18
+- Contract Address: 0x5a90Ec8873969982b82B80d246F70898c0b6A0BC
+- Symbol: USDTZ
+- Initial Mint: 1,000,000,000 all’owner wallet
+
+3. Liquidity & Price Stability
+- Liquidity Pool creata su PancakeSwap V2
+- Pair: USDTZ / USDT
+- Ratio: 1:1
+- Liquidity attuale: ~110 USDT
+- Prezzo obiettivo: 1 USDTZ ≈ 1 USD
+
+4. Use Case
+USDTZ può essere utilizzato come:
+- Collaterale in simulazioni di trading OTC
+- Asset per testare operazioni di swap e liquidity provision
+- Token dimostrativo in ambienti controllati
+
+5. Disclaimer
+USDTZ non è Tether né è legato a società terze.
+È un token dimostrativo non destinato a mercati retail o pubblici, ma a operazioni private o sperimentali.
