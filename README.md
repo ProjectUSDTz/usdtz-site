@@ -15,7 +15,7 @@
 - 🔗 [BscScan (Contract)](https://bscscan.com/address/0x5a90Ec8873969982b82B80d246F70898c0b6A0BC)  
 - 💧 [BscScan (Liquidity Pool)](https://bscscan.com/address/0x6cad41d0Ac6EEAc92B0aF5d1E1d77be3D0273714)  
 - 🔁 [Swap on PancakeSwap](https://pancakeswap.finance/swap)  
-- 📄 [Audit Report (DOCX)](USDTZ_AuditReport_Q3_2025.docx)  
+- 📄 [Audit Report (PDF)](USDTZ_AuditReport_Q3_2025.pdf)  
 - 🔐 [Audit on IPFS](https://ipfs.io/ipfs/Qmb2s3y7q2nUUufNLjui3yeiPzNPVmnJdFwGtffdF1GCTW)  
 - 🌐 [Pinata Gateway](https://harlequin-dear-capybara-57.mypinata.cloud/ipfs/Qmb2s3y7q2nUUufNLjui3yeiPzNPVmnJdFwGtffdF1GCTW)
 
