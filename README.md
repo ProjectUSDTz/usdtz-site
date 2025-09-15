@@ -50,7 +50,7 @@ Manual liquidity is handled by multi-wallet operations.
 - 📜 Code verified on BscScan
 
 ### 📄 Full Audit Report:
-- [DOCX Version](USDTZ_AuditReport_Q3_2025.docx)  
+- [PDF Version](USDTZ_AuditReport_Q3_2025.pdf)
 - [IPFS (Gateway)](https://ipfs.io/ipfs/Qmb2s3y7q2nUUufNLjui3yeiPzNPVmnJdFwGtffdF1GCTW)
 
 ---
