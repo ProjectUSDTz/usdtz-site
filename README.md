@@ -34,7 +34,7 @@ Last Updated: 18 September 2025 (Europe/Rome)
 - 📜 Code verified on BscScan
 
 ### 📄 Full Audit Report:
-- [PDF Version](USDTZ_AuditReport_Q3_2025.pdf)
+- [PDF Version](USDTZ_Audit_Report_Q3_2025_v1.1.pdf)
 - [Pinata Gateway](https://harlequin-dear-capybara-57.mypinata.cloud/ipfs/bafkreidpzxcndsieicl5cq4w3y4xmogogsj3yyv2htepeanxxo2s3kelvy)
 
 ---
