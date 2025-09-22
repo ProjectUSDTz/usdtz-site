@@ -14,7 +14,7 @@ Last Updated: 22 September 2025 (Europe/Rome)
 - Transparency: [https://usdt-z.cloud/transparency](https://usdt-z.cloud/transparency)
 - GitHub: [https://github.com/projectUSDTz](https://github.com/projectUSDTz)
 - Contract (BSC): [`0x86e7C48432fE2f98ABc6aDcA0aF87847Ab5542ce`](https://bscscan.com/token/0x86e7C48432fE2f98ABc6aDcA0aF87847Ab5542ce)
-- Canonical pair (Pancake v3 USDTz/USDT, fee 0.01%): `PAIR_URL_V3`
+- Canonical pair (Pancake v3 USDTz/USDT, fee 0.01%): (https://bscscan.com/address/0x5483d364EbdD0795E1F678Fa25bc365D17339d71).
 
 ## Key Notes
 - **Peg**: 1 USDTz = 1 USDT (pool canonica PancakeSwap v3).
