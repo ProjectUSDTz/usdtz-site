@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 100 100">
+  <defs>
+    <clipPath id="clipCircle"><circle cx="50" cy="50" r="50"/></clipPath>
+  </defs>
+  <circle cx="50" cy="50" r="50" fill="#26A17B"/>
+  <g clip-path="url(#clipCircle)">
+    <!-- conservative font-size and slight letter-spacing to keep it well inside -->
+    <text x="50" y="54" text-anchor="middle" dominant-baseline="middle"
+          font-family="DejaVu Sans, Arial, Helvetica, sans-serif"
+          font-weight="700" font-size="30" fill="#FFFFFF" letter-spacing="0.5">
+      USDTz
+    </text>
+  </g>
+</svg>
