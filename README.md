@@ -4,9 +4,9 @@ Last Updated: 22 September 2025 (Europe/Rome)
 
 ## Documents (current versions)
 - **Audit_Report.pdf** – Audit report, tokenomics, risks & recommendations.
-- **TTM.docx** – Terms to Market: OTC/collateral use, Pancake v3 canonical pair, LP sizing & slippage.
-- **Whitepaper_Lite.docx** – Technical overview, fixed tokenomics, use-case.
-- **Transparency_and_Policy.docx** – Policy, roles, circulating methodology.
+- **TTM.pdf** – Terms to Market: OTC/collateral use, Pancake v3 canonical pair, LP sizing & slippage.
+- **Whitepaper_Lite.pdf** – Technical overview, fixed tokenomics, use-case.
+- **Transparency_and_Policy.pdf** – Policy, roles, circulating methodology.
 - **circulating_registry.csv** – Public registry of excluded addresses from circulating supply.
 
 ## Official Links
