@@ -15,10 +15,10 @@ Questa PR aggiorna e normalizza la documentazione e i template di listing per **
 
 📂 `/docs/` (DOCX/PDF)
 
-- `USDTZ_Audit_Report_Q3_2025_v2.0.pdf`  
-- `USDTZ_Transparency_and_Policy_v2.0.pdf`  
-- `USDTZ_TTM_v2.0.pdf`  
-- `USDTZ_Whitepaper_Lite_v2.0.psd`  
+- `Audit_Report.pdf`  
+- `Transparency_and_Policy.pdf`  
+- `TTM.pdf`  
+- `Whitepaper_Lite.psd`  
 
 📄 `circulating_registry.csv` (aggiornato con contract, treasury, owner, pauser, LP canonica)  
 
