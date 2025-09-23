@@ -35,7 +35,7 @@ Last Updated: 22 September 2025 (Europe/Rome)
 - 📜 Code verified on BscScan (Standard JSON-Input, optimizer 200)
 
 ### 📄 Full Audit Report:
-- [Audit_Report.pdf](./docs/Audit_Report.pdf)
+- [Audit_Report.pdf](./Audit_Report.pdf)
 
 ---
 
