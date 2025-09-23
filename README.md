@@ -72,7 +72,7 @@ Last Updated: 22 September 2025 (Europe/Rome)
 
 \### 📄 Full Audit Report:
 
-\- \[Audit\_Report\.pdf](./docs/Audit\_Report\.docx)
+\- \[Audit\_Report\.pdf](./docs/Audit\_Report\.pdf)
 
 
 
