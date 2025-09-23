@@ -16,15 +16,11 @@
 
 ## 📁 Files updated (flat repo — no /docs or /assets folders)
 
-- `Audit_Report_EN.md`  
-- `Transparency_and_Policy_EN.md`  
-- `TTM_EN.md`  
-- `Whitepaper_Lite_EN.md`  
-- `Audit_Report_EN.docx`  
-- `Transparency_and_Policy_EN.docx`  
-- `TTM_EN.docx`  
-- `Whitepaper_Lite_EN.docx`  
-- `circulating_registry.cleaned.with_pair.csv`  
+- `Audit_Report.pdf`  
+- `Transparency_and_Policy.pdf`  
+- `TTM.pdf`  
+- `Whitepaper_Lite.pdf`  
+- `circulating_registry.csv`  
 - `PULL_REQUEST.md` (this file)
 
 > Note: A flat repository layout is kept intentionally. None of BscScan, Etherscan or CoinGecko **require** a specific folder structure in your Git repo for listing; they primarily consume **on‑chain data** and the **assets/links** you submit via their portals. If needed later, we can introduce `/docs` and `/assets` for GitHub Pages without affecting listings.
