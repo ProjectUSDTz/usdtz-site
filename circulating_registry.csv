@@ -1,6 +1,0 @@
-address,label,category,excluded_from_circulating,lock_tx,lock_until,notes
-0x86e7C48432fE2f98ABc6aDcA0aF87847Ab5542ce,USDTz Token Contract,Contract,True,,,"Main contract, excluded from circulating supply"
-0xC6BEdBB3542b044E124F1261e2D146174f622F2D,Treasury (genesis supply),Treasury,True,,,Holds 100B genesis supply
-0xFA4C56bC42C78816B7622f8d4EecF1caAd89fDb4,Owner/Admin,Owner,True,,,Owner with unpause and ownership transfer rights
-0x886C8047F4cF961b738a2d7b01f38c2A93d9E657,Pauser/Operativo-LP,Pauser,True,,,"Operational LP manager, pauser in emergencies"
-PAIR_URL_V3,Pancake v3 USDTz/USDT LP,LP,False,,,Canonical v3 pair; LP not locked and therefore included in circulating
