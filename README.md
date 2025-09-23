@@ -3,11 +3,11 @@
 Last Updated: 22 September 2025 (Europe/Rome)
 
 ## Documents (current versions)
-- **USDTZ_Audit_Report_Q3_2025_v2.0.docx** – Audit report, tokenomics, risks & recommendations.
-- **USDTZ_TTM_v2.0.docx** – Terms to Market: OTC/collateral use, Pancake v3 canonical pair, LP sizing & slippage.
-- **USDTZ_Whitepaper_Lite_v2.0.docx** – Technical overview, fixed tokenomics, use-case.
-- **USDTZ_Transparency_and_Policy_v2.0.docx** – Policy, roles, circulating methodology.
-- **/docs/circulating_registry.csv** – Public registry of excluded addresses from circulating supply.
+- **Audit_Report.pdf** – Audit report, tokenomics, risks & recommendations.
+- **TTM.docx** – Terms to Market: OTC/collateral use, Pancake v3 canonical pair, LP sizing & slippage.
+- **Whitepaper_Lite.docx** – Technical overview, fixed tokenomics, use-case.
+- **Transparency_and_Policy.docx** – Policy, roles, circulating methodology.
+- **circulating_registry.csv** – Public registry of excluded addresses from circulating supply.
 
 ## Official Links
 - Website: [https://usdt-z.cloud](https://usdt-z.cloud)
