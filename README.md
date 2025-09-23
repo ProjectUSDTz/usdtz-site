@@ -35,7 +35,7 @@ Last Updated: 22 September 2025 (Europe/Rome)
 - 📜 Code verified on BscScan (Standard JSON-Input, optimizer 200)
 
 ### 📄 Full Audit Report:
-- [USDTZ_Audit_Report_Q3_2025_v2.0.docx](./docs/USDTZ_Audit_Report_Q3_2025_v2.0.docx)
+- [Audit_Report.pdf](./docs/Audit_Report.pdf)
 
 ---
 
