@@ -72,7 +72,7 @@ Last Updated: 22 September 2025 (Europe/Rome)
 
 \### 📄 Full Audit Report:
 
-\- \[USDTZ\_Audit\_Report\_Q3\_2025\_v2.0.docx](./docs/USDTZ\_Audit\_Report\_Q3\_2025\_v2.0.docx)
+\- \[Audit\_Report\.pdf](./docs/Audit\_Report\.docx)
 
 
 
