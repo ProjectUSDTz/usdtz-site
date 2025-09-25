@@ -2,12 +2,14 @@
   "contract": "0x86e7C48432fE2f98ABc6aDcA0aF87847Ab5542ce",
   "chain": "bsc",
   "decimals": 6,
-  "circulating_supply": 90.00000,
-  "last_updated": "2025-09-26T00:00:00Z",
+  "circulating_supply": 89,
+  "last_updated": "2025-09-25T12:00:00Z",
   "source": {
-    "methodology": "Total Supply – Non-circulating (labeled wallets). On-chain > docs.",
-    "holders": "https://bscscan.com/token/0x86e7C48432fE2f98ABc6aDcA0aF87847Ab5542ce#balances"
+    "methodology": "Total – Non-circulating (labeled wallets). DEX liquidity counted as circulating unless LP is time-locked.",
+    "transparency": "https://www.usdt-z.cloud#transparency",
+    "pair_info": "https://pancakeswap.finance/info/v3/pairs/0x5483d364EbdD0795E1F678Fa25bc365D17339d71"
   }
 }
+
 
 
