@@ -2,7 +2,7 @@
   "contract": "0x86e7C48432fE2f98ABc6aDcA0aF87847Ab5542ce",
   "chain": "bsc",
   "decimals": 6,
-  "circulating_supply": 89,
+  "circulating_supply": 90,
   "last_updated": "2025-09-25T12:00:00Z",
   "source": {
     "methodology": "Total – Non-circulating (labeled wallets). DEX liquidity counted as circulating unless LP is time-locked.",
@@ -10,6 +10,7 @@
     "pair_info": "https://pancakeswap.finance/info/v3/pairs/0x5483d364EbdD0795E1F678Fa25bc365D17339d71"
   }
 }
+
 
 
 
