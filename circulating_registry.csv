@@ -1,0 +1,5 @@
+network,token_address,address,label,role,excluded,balance,last_updated,pair_address,lp_position_id
+BSC,0x86e7c48432fe2f98abc6adca0af87847ab5542ce,0x86e7c48432fe2f98abc6adca0af87847ab5542ce,USDTz Token Contract,,False,0.0,2025-09-23T08:34:45Z,0x5483d364EbdD0795E1F678Fa25bc365D17339d71,4180311.0
+BSC,0x86e7c48432fe2f98abc6adca0af87847ab5542ce,0xc6bedbb3542b044e124f1261e2d146174f622f2d,Treasury (genesis supply),,False,99999999900.0,2025-09-23T08:34:45Z,0x5483d364EbdD0795E1F678Fa25bc365D17339d71,4180311.0
+BSC,0x86e7C48432fE2f98ABc6aDcA0aF87847Ab5542ce,0x5483d364EbdD0795E1F678Fa25bc365D17339d71,PancakeSwap v3 USDTz/USDT Pair (info),lp_pair,False,90.0,2025-09-23T08:40:16Z,0x5483d364EbdD0795E1F678Fa25bc365D17339d71,4180311.0
+Changelog: labels & balances mirror https://www.usdt-z.cloud/transparency and https://www.usdt-z.cloud/api/circulating_supply.json (On-chain > docs).,,,,,,,,,
