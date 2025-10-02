@@ -1,0 +1,748 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>USDT.z (USDTz) — Official Overview</title>
+  <meta name="description" content="Official token overview for USDT.z (USDTz). Not affiliated with Tether or USDtez (USDTZ). Governance-less: ownership renounced, pauser disabled. Transparency, documents, tokenomics, roadmap, and contacts. OTC & collateral usage only.">
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" href="./assets/img/logo.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="./assets/img/logo.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="./assets/img/logo.png" sizes="180x180">
+  <meta name="theme-color" content="#0c2422">
+  <meta name="msapplication-TileColor" content="#0c2422">
+
+  <!-- Bootstrap 5 (CSS) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* === Theme (dark, neon-teal) === */
+    :root{
+      --nav-offset:72px;
+      --bg-deep:#0b1515;
+      --bg-pane:#0f1f1f;
+      --bg-soft:#112626;
+      --text:#e7f2ef;
+      --muted:#98b6b1;
+      --accent:#1fa084; /* teal */
+      --accent-soft:#153b37;
+      --border:#183534;
+      --badge:#15c39a;
+    }
+    html,body{background:radial-gradient(1200px 600px at 50% -10%, #133130 0%, var(--bg-deep) 55%) fixed; color:var(--text);}
+    body{padding-top:var(--nav-offset); scroll-behavior:smooth; scroll-padding-top:var(--nav-offset);}
+    .navbar{background:rgba(6,14,14,.88)!important; backdrop-filter:saturate(140%) blur(6px);}
+    .navbar-brand,.nav-link{color:#dff7f1!important}
+    .nav-link:hover{color:#9be8d8!important}
+
+    .brand-logo{height:28px;width:28px;border-radius:50%;object-fit:cover;margin-right:.5rem}
+
+    h1,h2,h3,h4,h5{color:#e9fffb}
+    .text-muted{color:var(--muted)!important}
+    .address{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.95rem;word-break:break-all}
+    .section-title{margin-bottom:.75rem}
+
+    .card{background:linear-gradient(180deg,var(--bg-pane),var(--bg-soft)); border:1px solid var(--border); color:var(--text)}
+    .list-group-item{background:var(--bg-pane); color:var(--text); border-color:var(--border)}
+    .list-group-item-action:hover{background:var(--bg-soft)}
+    .badge{border-radius:.4rem}
+    .table{color:var(--text)}
+    .table-striped>tbody>tr:nth-of-type(odd)>*{--bs-table-accent-bg: rgba(31,160,132,.06)}
+    .btn-outline-dark{border-color:#2d5a56;color:#d9fffa}
+    .btn-outline-dark:hover{background:#2d5a56;color:#fff}
+    .btn-outline-secondary{border-color:#3a6b66;color:#d0f3ee}
+    .btn-outline-secondary:hover{background:#3a6b66;color:#fff}
+    .btn-outline-primary{border-color:var(--accent); color:#cffff5}
+    .btn-outline-primary:hover{background:var(--accent); color:#001c18}
+    .btn-dark{background:var(--accent); border-color:var(--accent); color:#001c18}
+    .btn-dark:hover{filter:brightness(1.05)}
+
+    code{user-select:all}
+    footer small a{text-decoration:none}
+
+    /* === Hero visual banner === */
+    .hero-visual{
+      position:relative; height:360px; border-radius:16px; overflow:hidden;
+      /* metti l’immagine qui: ./assets/img/hero-usdtz.jpg  (puoi usare anche .png e cambiare sotto) */
+      background: url('./assets/img/hero-usdtz.jpg') center/cover no-repeat;
+      box-shadow: 0 0 0 1px var(--border), 0 30px 60px rgba(0,0,0,.35);
+    }
+    .hero-visual:before{
+      content:""; position:absolute; inset:0;
+      background: radial-gradient(600px 240px at 50% 52%, rgba(31,160,132,.45), rgba(0,0,0,.55)),
+                  linear-gradient(to bottom, rgba(15,31,31,.6), rgba(11,21,21,.9));
+    }
+    .hero-visual .center-badge{
+      position:absolute; inset:0; display:grid; place-items:center;
+    }
+    .hero-visual .center-badge .badge-inner{
+      display:flex; align-items:center; gap:.65rem;
+      background: rgba(5,12,12,.55); border:1px solid var(--accent); padding:.6rem .9rem; border-radius:999px;
+      box-shadow: 0 0 30px rgba(31,160,132,.45), inset 0 0 18px rgba(31,160,132,.18);
+      backdrop-filter: blur(2px);
+    }
+    .hero-visual .center-badge img{height:30px;width:30px;border-radius:50%}
+    .hero-visual .center-badge span{font-weight:700; letter-spacing:.3px; color:#dffdf7}
+
+    /* PDF viewer modal */
+    #pdfViewerBody{min-height:70vh}
+    #pdfFrame{width:100%; height:75vh; border:0}
+    @media (max-width:576px){ #pdfFrame{height:70vh} }
+
+    pre.json{background:var(--bg-pane); border:1px solid var(--border); border-radius:.5rem; padding:1rem; overflow:auto; color:#bcf1e7}
+  </style>
+</head>
+<body>
+
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-semibold d-flex align-items-center" href="#home">
+        <img src="./assets/img/logo.png" alt="USDTz logo" class="brand-logo">
+        <span>USDT.z (USDTz)</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#roles">Roles</a></li>
+          <li class="nav-item"><a class="nav-link" href="#transparency">Transparency</a></li>
+          <li class="nav-item"><a class="nav-link" href="#security">Security</a></li>
+          <li class="nav-item"><a class="nav-link" href="#otc-policy">OTC Policy</a></li>
+          <li class="nav-item"><a class="nav-link" href="#documents">Documents</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tokenomics">Tokenomics</a></li>
+          <li class="nav-item"><a class="nav-link" href="#roadmap">Roadmap</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO (visual banner + anchor) -->
+  <div id="home" class="container pt-4">
+    <div class="hero-visual mb-4">
+      <div class="center-badge">
+        <div class="badge-inner">
+          <img src="./assets/img/logo.png" alt="USDTz">
+          <span>USDTz — Official Overview</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Governance-less notice -->
+  <div class="container">
+    <div class="alert alert-success text-center mb-4" role="alert" style="border:1px solid #1fa084;background:rgba(31,160,132,.12);color:#dffdf7">
+      ✅ USDTz is now fully decentralized: ownership renounced, pauser disabled, no privileged functions remain.
+      <a href="#security" class="alert-link" style="color:#9be8d8">View security proof</a>
+    </div>
+  </div>
+
+  <!-- Token quick facts & addresses -->
+  <section class="pb-4">
+    <div class="container">
+      <div class="row align-items-stretch g-4">
+        <div class="col-12 col-lg-7">
+          <div class="card h-100">
+            <div class="card-body">
+              <h1 class="h3 fw-semibold mb-3">USDT.z <span class="text-muted">(USDTz)</span></h1>
+              <p class="mb-4 text-muted">On-chain identifiers, token facts, governance roles, and public registries.</p>
+              <div class="row gy-3">
+                <div class="col-12 col-md-6">
+                  <div class="text-muted">Symbol</div>
+                  <div class="fw-semibold">USDTz</div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="text-muted">Total Supply</div>
+                  <div class="fw-semibold">100,000,000,000</div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="text-muted">Decimals</div>
+                  <div class="fw-semibold">6</div>
+                </div>
+                <div class="col-12">
+                  <div class="d-flex flex-column flex-lg-row align-items-lg-center justify-content-between">
+                    <div>
+                      <div class="text-muted">Token Contract (BSC)</div>
+                      <div class="address" id="contractAddress">0x86e7C48432fE2f98ABc6aDcA0aF87847Ab5542ce</div>
+                    </div>
+                    <div class="mt-3 mt-lg-0">
+                      <button class="btn btn-outline-secondary btn-sm copy-btn" onclick="copyText('#contractAddress')" aria-label="Copy contract address">Copy</button>
+                      <a class="btn btn-outline-primary btn-sm" href="https://bscscan.com/address/0x86e7c48432fe2f98abc6adca0af87847ab5542ce" target="_blank" rel="noopener noreferrer">View on BscScan</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="text-muted">Primary Pair (PancakeSwap v3)</div>
+                  <div class="d-flex flex-column flex-lg-row align-items-lg-center justify-content-between">
+                    <div class="address" id="pairAddress">0x5483d364EbdD0795E1F678Fa25bc365D17339d71</div>
+                    <div class="mt-2 mt-lg-0">
+                      <button class="btn btn-outline-secondary btn-sm copy-btn" onclick="copyText('#pairAddress')" aria-label="Copy pair address">Copy</button>
+                      <a class="btn btn-outline-dark btn-sm" href="https://pancakeswap.finance/info/v3/pairs/0x5483d364EbdD0795E1F678Fa25bc365D17339d71?chain=bsc" target="_blank" rel="noopener noreferrer">View Pair (Info)</a>
+                    </div>
+                  </div>
+                  <p class="small text-muted mt-2 mb-0">
+                    Note: USDTz is for OTC and collateral operations only; public DEX trading is not offered nor supported. Any third-party pools are unofficial.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- OTC-only scope -->
+        <div class="col-12 col-lg-5">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="fw-semibold mb-2">OTC-only scope</div>
+              <p class="mb-2">
+                USDT.z (ticker: <strong>USDTz</strong>) is intended for OTC settlement and collateral use cases.
+              </p>
+              <p class="mb-2">
+                No official public DEX trading or market-making is provided. A minimal PancakeSwap v3 pool exists only for price discovery; no liquidity commitments, no endorsements of secondary markets.
+              </p>
+              <p class="mb-0">
+                <strong>Not affiliated with Tether or USDtez (USDTZ).</strong> On-chain references prevail over any text materials.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OTC Policy -->
+  <section id="otc-policy" class="py-5">
+    <div class="container">
+      <h2 class="h3 section-title">OTC & Collateral Policy</h2>
+      <p class="text-muted">
+        USDTz is not offered for public exchange trading. All transfers and settlements are handled via OTC channels or as collateral arrangements with counterparties.
+        Any third-party liquidity pools or secondary markets are not official nor supported. Not affiliated with Tether or USDtez (USDTZ).
+      </p>
+      <div class="d-flex flex-wrap gap-2">
+        <a class="btn btn-outline-dark" href="mailto:info@usdt-z.cloud?subject=USDTz%20OTC%20Request">Request OTC Desk</a>
+        <a class="btn btn-outline-secondary" href="#documents">Review Documents</a>
+        <a class="btn btn-outline-primary" href="https://bscscan.com/address/0x86e7c48432fe2f98abc6adca0af87847ab5542ce" target="_blank" rel="noopener">Verify on BscScan</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roles -->
+  <section id="roles" class="py-5 pt-0">
+    <div class="container">
+      <h2 class="h3 section-title">Roles</h2>
+      <p class="text-muted mb-4">Assigned addresses for operational functions.</p>
+
+      <div class="row g-4">
+        <!-- Owner / Admin (RENOUNCED) -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <h3 class="h5 mb-2">Owner / Admin</h3>
+              <div class="address flex-grow-1" id="addrOwner">0x0000000000000000000000000000000000000000</div>
+              <p class="small text-muted mt-2 mb-0">Ownership renounced. No admin wallet can change contract parameters.</p>
+              <div class="mt-3">
+                <button class="btn btn-outline-secondary btn-sm copy-btn" onclick="copyText('#addrOwner')" aria-label="Copy Owner address">Copy</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Treasury (unchanged) -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <h3 class="h5 mb-2">Treasury</h3>
+              <div class="address flex-grow-1" id="addrTreasury">0xC6BEdBB3542b044E124F1261e2D146174f622F2D</div>
+              <div class="mt-3">
+                <button class="btn btn-outline-secondary btn-sm copy-btn" onclick="copyText('#addrTreasury')" aria-label="Copy Treasury address">Copy</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pauser (DEACTIVATED) -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <h3 class="h5 mb-2">Pauser (Deactivated)</h3>
+              <div class="address flex-grow-1" id="addrPauser">0x0000000000000000000000000000000000000001</div>
+              <p class="small text-muted mt-2 mb-0">Control permanently disabled. Function <code>pause()</code> is no longer callable by any address.</p>
+              <div class="mt-3">
+                <button class="btn btn-outline-secondary btn-sm copy-btn" onclick="copyText('#addrPauser')" aria-label="Copy Pauser address">Copy</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- /row -->
+    </div>
+  </section>
+
+  <!-- Transparency -->
+  <section id="transparency" class="py-5">
+    <div class="container">
+      <h2 class="h3 section-title">Transparency</h2>
+      <p class="text-muted mb-4">Public references, registries, and verification.</p>
+
+      <div class="list-group shadow-sm">
+        <!-- CSV -->
+        <div class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+          <span>Circulating registry (CSV)</span>
+          <div class="btn-group">
+            <button class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#csvModal" onclick="loadCSV('./circulating_registry.csv')">View</button>
+            <a class="btn btn-outline-dark btn-sm" href="./circulating_registry.csv" download>Download</a>
+          </div>
+        </div>
+
+        <!-- JSON: Total Supply -->
+        <div class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+          <span>Total supply (JSON)</span>
+          <div class="btn-group">
+            <button class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#jsonModal" onclick="loadJSON('./total_supply.json','Total supply (JSON)')">View</button>
+            <a class="btn btn-outline-dark btn-sm" href="./total_supply.json" download>Download</a>
+          </div>
+        </div>
+
+        <!-- JSON: Circulating Supply -->
+        <div class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+          <span>Circulating supply (JSON)</span>
+          <div class="btn-group">
+            <button class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#jsonModal" onclick="loadJSON('./circulating_supply.json','Circulating supply (JSON)')">View</button>
+            <a class="btn btn-outline-dark btn-sm" href="./circulating_supply.json" download>Download</a>
+          </div>
+        </div>
+
+        <!-- Pancake & BscScan -->
+        <a href="https://pancakeswap.finance/info/v3/pairs/0x5483d364EbdD0795E1F678Fa25bc365D17339d71?chain=bsc" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+          <span>PancakeSwap v3 Pair (Info only)</span>
+          <span class="badge" style="background:var(--badge)">DEX</span>
+        </a>
+
+        <a href="https://bscscan.com/address/0x86e7c48432fe2f98abc6adca0af87847ab5542ce" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+          <span>BscScan — Token Contract</span>
+          <span class="badge bg-secondary">On-chain</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Security & Control Status -->
+  <section id="security" class="py-5">
+    <div class="container">
+      <h2 class="h3 section-title">Security & Control Status</h2>
+      <p class="text-muted">The USDTz contract has permanently disabled any form of privileged access:</p>
+      <ul class="mb-3">
+        <li><strong>✅ Ownership Renounced:</strong> <code>owner() = 0x000...0000</code> → No admin wallet exists</li>
+        <li><strong>✅ Pauser Deactivated:</strong> <code>currentPauser() = 0x000...0001</code> → <code>pause()</code>/<code>unpause()</code> disabled</li>
+        <li><strong>✅ Fixed Supply:</strong> No mint/burn functions beyond constructor</li>
+        <li><strong>✅ No blacklist / tax / trading restriction logic</strong></li>
+      </ul>
+      <p class="text-muted">All values are verifiable on-chain. These changes ensure full immutability and trustless operation.</p>
+
+      <div class="d-flex flex-wrap gap-2 mb-3">
+        <a class="btn btn-outline-primary btn-sm"
+           href="https://bscscan.com/address/0x86e7c48432fe2f98abc6adca0af87847ab5542ce#readContract"
+           target="_blank" rel="noopener">Verify on BscScan (read)</a>
+        <a class="btn btn-outline-dark btn-sm"
+           href="https://bscscan.com/address/0x86e7c48432fe2f98abc6adca0af87847ab5542ce#code"
+           target="_blank" rel="noopener">Source Code</a>
+      </div>
+
+      <!-- On-chain proofs -->
+      <ul class="list-group mt-3 shadow-sm">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span>Contract creation (deploy)</span>
+          <a href="https://bscscan.com/tx/0x6071b216155cd230c35efcaac89373ced94b1f2b4b589b790b6204f1e154cffc"
+             target="_blank" rel="noopener" class="btn btn-sm btn-outline-dark">View TX</a>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span>Pauser removed (set to 0x000...0001)</span>
+          <a href="https://bscscan.com/tx/0xca4ca551f5704a62ab4560853f8e3d4b2eac33914f8af70cb5ec74275c4182a3"
+             target="_blank" rel="noopener" class="btn btn-sm btn-outline-dark">View TX</a>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span>Ownership renounced (owner → 0x000...0000)</span>
+          <a href="https://bscscan.com/tx/0xf36314f635bd03d1a31677b0ff90094ec7b4837e1157ec236f82078673a2e5c0"
+             target="_blank" rel="noopener" class="btn btn-sm btn-outline-dark">View TX</a>
+        </li>
+        <li class="list-group-item">
+          <div class="d-flex flex-wrap align-items-center justify-content-between gap-2">
+            <div>
+              <div class="small text-muted">Creator confirmation signature hash</div>
+              <code id="creatorSigHash">0xca517ebdd0a1c3ec4fa6a6cda173a5b6ec3ee08b50761bcd2f18ea2e736bdc1d4e104aea249ff7c787cfe44cfdc58051d501f4ab5652c46d17fb0e7a3a86e9841c</code>
+            </div>
+            <button class="btn btn-outline-secondary btn-sm copy-btn" onclick="copyText('#creatorSigHash')">Copy</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Documents -->
+  <section id="documents" class="py-5">
+    <div class="container">
+      <h2 class="h3 section-title">Documents</h2>
+      <p class="text-muted mb-4">Documentation available in PDF format.</p>
+
+      <!-- Audit (IPFS) -->
+      <div class="row g-3">
+        <div class="col-12">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="d-flex flex-wrap justify-content-between align-items-center mb-2">
+                <h3 class="h6 mb-2 mb-sm-0">Audit Report</h3>
+                <div class="d-flex flex-wrap gap-2">
+                  <button class="btn btn-dark btn-sm" id="openViewerBtn" data-bs-toggle="modal" data-bs-target="#pdfViewerModal">Open in Viewer (auto)</button>
+                  <a class="btn btn-outline-dark btn-sm" href="./docs/Audit_Report.pdf" target="_blank" rel="noopener noreferrer">Open Local</a>
+                </div>
+              </div>
+
+              <div class="d-flex flex-wrap gap-2 mb-2">
+                <a class="btn btn-outline-primary btn-sm" id="ipfsCustomLink"
+                   href="https://harlequin-dear-capybara-57.mypinata.cloud/ipfs/bafkreiefl742m4antxq6mocbztzi6eqzwq45q3qm7p2o3ktv22f4torjc4"
+                   target="_blank" rel="noopener noreferrer">
+                  Custom Gateway <span id="badgeCustom" class="badge ms-1 bg-secondary">check</span>
+                </a>
+                <a class="btn btn-outline-secondary btn-sm" id="ipfsDwebLink"
+                   href="https://bafkreiefl742m4antxq6mocbztzi6eqzwq45q3qm7p2o3ktv22f4torjc4.ipfs.dweb.link"
+                   target="_blank" rel="noopener noreferrer">
+                  dweb.link <span id="badgeDweb" class="badge ms-1 bg-secondary">check</span>
+                </a>
+                <a class="btn btn-outline_secondary btn-sm" id="ipfsPinataLink"
+                   href="https://gateway.pinata.cloud/ipfs/bafkreiefl742m4antxq6mocbztzi6eqzwq45q3qm7p2o3ktv22f4torjc4"
+                   target="_blank" rel="noopener noreferrer">
+                  Pinata Gateway <span id="badgePinata" class="badge ms-1 bg-secondary">check</span>
+                </a>
+                <a class="btn btn-outline-secondary btn-sm" id="ipfsPublicLink"
+                   href="https://ipfs.io/ipfs/bafkreiefl742m4antxq6mocbztzi6eqzwq45q3qm7p2o3ktv22f4torjc4"
+                   target="_blank" rel="noopener noreferrer">
+                  ipfs.io <span id="badgePublic" class="badge ms-1 bg-secondary">check</span>
+                </a>
+                <button class="btn btn-outline-secondary btn-sm"
+                        onclick="openPdfViewer(bestPdfURL || './docs/Audit_Report.pdf', 'Audit Report (best source)')"
+                        data-bs-toggle="modal" data-bs-target="#pdfViewerModal">Quick View</button>
+              </div>
+
+              <div class="mb-2">
+                <div class="text-muted small">IPFS CID</div>
+                <div class="d-flex align-items-center gap-2">
+                  <code id="auditCID" class="flex-grow-1">bafkreiefl742m4antxq6mocbztzi6eqzwq45q3qm7p2o3ktv22f4torjc4</code>
+                  <button class="btn btn-outline-secondary btn-sm copy-btn" onclick="copyText('#auditCID')" aria-label="Copy IPFS CID">Copy</button>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <div class="text-muted small">Gateway status legend</div>
+                <div class="small text-muted">
+                  <span class="badge bg-success">Verified (inline)</span> opens in-browser ·
+                  <span class="badge bg-warning">Reachable (download)</span> may download ·
+                  <span class="badge bg-danger">Unavailable</span> link disabled
+                </div>
+              </div>
+
+              <div>
+                <div class="text-muted small">SHA-256 (local file)</div>
+                <div class="d-flex align-items-center gap-2">
+                  <code id="auditHash" class="flex-grow-1">Computing…</code>
+                  <button class="btn btn-outline-secondary btn-sm" id="hashBtn"
+                          onclick="computeSHA256('./docs/Audit_Report.pdf', '#auditHash', this)">
+                    Compute
+                  </button>
+                  <button class="btn btn-outline-secondary btn-sm copy-btn" onclick="copyText('#auditHash')" aria-label="Copy SHA-256">Copy</button>
+                </div>
+                <div class="form-text text-muted">Computed in your browser from <code>./docs/Audit_Report.pdf</code>.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Other PDFs -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <a class="btn btn-outline-dark w-100" href="./docs/Transparency_and_Policy.pdf" target="_blank" rel="noopener noreferrer">Transparency &amp; Policy (PDF)</a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <a class="btn btn-outline-dark w-100" href="./docs/TTM.pdf" target="_blank" rel="noopener noreferrer">TTM (PDF)</a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <a class="btn btn-outline-dark w-100" href="./docs/Whitepaper_Lite.pdf" target="_blank" rel="noopener noreferrer">Whitepaper Lite (PDF)</a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <a class="btn btn-outline-dark w-100" href="./docs/Tokenomics_and_Distribution.pdf" target="_blank" rel="noopener noreferrer">Tokenomics &amp; Distribution (PDF)</a>
+        </div>
+      </div>
+
+      <p class="text-muted small mt-3 mb-0">If a discrepancy ever exists between documents and on-chain data, on-chain records take precedence.</p>
+    </div>
+  </section>
+
+  <!-- Tokenomics -->
+  <section id="tokenomics" class="py-5">
+    <div class="container">
+      <h2 class="h3 section-title">Tokenomics</h2>
+      <div class="row g-3">
+        <div class="col-12 col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <ul class="mb-0">
+                <li><strong>Total Supply:</strong> 100,000,000,000 USDTz</li>
+                <li><strong>Decimals:</strong> 6</li>
+                <li><strong>Standard:</strong> BEP-20 (ERC-20 compatible)</li>
+                <li><strong>Primary Pair:</strong> PancakeSwap v3 — <span class="address">0x5483d364EbdD0795E1F678Fa25bc365D17339d71</span> (info only)</li>
+                <li><strong>Contract:</strong> <span class="address">0x86e7C48432fE2f98ABc6aDcA0aF87847Ab5542ce</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <p class="mb-0 text-muted">
+                All token metrics and addresses are verifiable on-chain. Any discrepancy between documents and on-chain data should be resolved in favor of on-chain records.
+                USDTz is not offered for public DEX trading.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmap -->
+  <section id="roadmap" class="py-5">
+    <div class="container">
+      <h2 class="h3 section-title">Roadmap</h2>
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card h-100"><div class="card-body">
+            <h3 class="h6 text-muted">Q3 2025</h3>
+            <ul class="mb-0"><li>Token contract deployed and verified on BSC</li><li>Initial public references & transparency registry</li></ul>
+          </div></div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card h-100"><div class="card-body">
+            <h3 class="h6 text-muted">Q4 2025</h3>
+            <ul class="mb-0"><li>Official website & documentation refresh</li><li>OTC desk processes and collateral workflows</li></ul>
+          </div></div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card h-100"><div class="card-body">
+            <h3 class="h6 text-muted">Q1 2026</h3>
+            <ul class="mb-0"><li>Directory listings (trackers/analytics)</li><li>Further transparency datasets</li></ul>
+          </div></div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card h-100"><div class="card-body">
+            <h3 class="h6 text-muted">Q2 2026</h3>
+            <ul class="mb-0"><li>Counterparty onboarding refinements</li><li>Operational policy updates</li></ul>
+          </div></div>
+        </div>
+      </div>
+      <p class="text-muted small mt-3 mb-0">Timeline is indicative and may evolve based on community feedback and operational priorities.</p>
+    </div>
+  </section>
+
+  <!-- Contact & Community -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2 class="h3 section-title">Contact & Community</h2>
+      <ul class="mb-3">
+        <li>Email (OTC desk): <a href="mailto:info@usdt-z.cloud?subject=USDTz%20OTC%20Request">info@usdt-z.cloud</a></li>
+        <li>Instagram: <a href="https://instagram.com/usdtz2025" target="_blank" rel="noopener noreferrer">@usdtz2025</a></li>
+        <li>Facebook: <a href="https://www.facebook.com/people/USDTz-USDTz-Genuine-BNB-Smart-Chain/61581801980693/" target="_blank" rel="noopener noreferrer">USDTz — Genuine (BNB Smart Chain)</a></li>
+        <li>Telegram (announcements): <a href="https://t.me/USDTz_Announcements" target="_blank" rel="noopener noreferrer">t.me/USDTz_Announcements</a></li>
+        <li>X (Twitter): <a href="https://x.com/ZUsdt81051" target="_blank" rel="noopener noreferrer">@ZUsdt81051</a> <span class="text-muted">(display name: USDT.z)</span></li>
+        <li>GitHub: <a href="https://github.com/ProjectUSDTZ" target="_blank" rel="noopener noreferrer">github.com/ProjectUSDTZ</a></li>
+        <li>BscScan: <a href="https://bscscan.com/address/0x86e7c48432fe2f98abc6adca0af87847ab5542ce" target="_blank" rel="noopener noreferrer">Token Contract</a></li>
+        <li>PancakeSwap (Info v3 Pair): <a href="https://pancakeswap.finance/info/v3/pairs/0x5483d364EbdD0795E1F678Fa25bc365D17339d71?chain=bsc" target="_blank" rel="noopener noreferrer">View Pair</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-4 border-top" style="border-color:var(--border)!important; background:var(--bg-pane)">
+    <div class="container">
+      <small class="text-muted d-block">
+        Disclaimer: “Not affiliated with Tether or USDtez (USDTZ). On-chain &gt; documents. OTC & collateral only; no public DEX trading offered or supported.
+        Contacts:
+        <a href="mailto:info@usdt-z.cloud">info@usdt-z.cloud</a> |
+        Instagram <a href="https://instagram.com/usdtz2025" target="_blank" rel="noopener noreferrer">@usdtz2025</a> |
+        Facebook <a href="https://www.facebook.com/people/USDTz-USDTz-Genuine-BNB-Smart-Chain/61581801980693/" target="_blank" rel="noopener noreferrer">page</a> |
+        Telegram <a href="https://t.me/USDTz_Announcements" target="_blank" rel="noopener noreferrer">announcements</a> |
+        X <a href="https://x.com/ZUsdt81051" target="_blank" rel="noopener noreferrer">@ZUsdt81051</a> (USDT.z) |
+        GitHub <a href="https://github.com/ProjectUSDTZ" target="_blank" rel="noopener noreferrer">ProjectUSDTZ</a>”.
+      </small>
+    </div>
+  </footer>
+
+  <!-- CSV Modal -->
+  <div class="modal fade" id="csvModal" tabindex="-1" aria-hidden="true" aria-labelledby="csvModalTitle">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content" style="background:var(--bg-pane); color:var(--text); border-color:var(--border)">
+        <div class="modal-header" style="border-color:var(--border)">
+          <h5 id="csvModalTitle" class="modal-title">Circulating registry (CSV)</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div id="csvSpinner" class="text-center my-4">Loading…</div>
+          <div class="table-responsive" id="csvTableWrap" style="display:none;">
+            <table class="table table-sm table-striped">
+              <thead id="csvThead"></thead>
+              <tbody id="csvTbody"></tbody>
+            </table>
+          </div>
+          <div id="csvError" class="alert alert-warning d-none">Unable to load CSV.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JSON Modal -->
+  <div class="modal fade" id="jsonModal" tabindex="-1" aria-hidden="true" aria-labelledby="jsonModalTitle">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content" style="background:var(--bg-pane); color:var(--text); border-color:var(--border)">
+        <div class="modal-header" style="border-color:var(--border)">
+          <h5 id="jsonModalTitle" class="modal-title">JSON</h5>
+          <button type="button" class="btn btn-outline-secondary btn-sm me-2" onclick="copyText('#jsonPre')">Copy</button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div id="jsonSpinner" class="text-center my-4">Loading…</div>
+          <pre id="jsonPre" class="json d-none"></pre>
+          <div id="jsonError" class="alert alert-warning d-none">Unable to load JSON.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PDF Viewer Modal -->
+  <div class="modal fade" id="pdfViewerModal" tabindex="-1" aria-hidden="true" aria-labelledby="pdfModalTitle">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content" style="background:var(--bg-pane); color:var(--text); border-color:var(--border)">
+        <div class="modal-header" style="border-color:var(--border)">
+          <h5 id="pdfModalTitle" class="modal-title">PDF Viewer</h5>
+          <a id="pdfOpenInTab" href="#" target="_blank" rel="noopener" class="btn btn-outline-secondary btn-sm me-2">Open in new tab</a>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div id="pdfViewerBody" class="modal-body">
+          <div id="pdfSpinner" class="text-center my-4">Loading…</div>
+          <iframe id="pdfFrame" src="" title="PDF" style="display:none;"></iframe>
+          <div id="pdfError" class="alert alert-warning d-none">Unable to display PDF. Try “Open in new tab”.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 (JS bundle) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Utilities + CSV/JSON viewers + SHA-256 + IPFS verify + PDF viewer -->
+  <script>
+    /* ---------- utilities ---------- */
+    function copyText(selector){
+      const el=document.querySelector(selector); if(!el) return;
+      const text=el.textContent.trim();
+      if(!navigator.clipboard){
+        const ta=document.createElement('textarea'); ta.value=text; document.body.appendChild(ta); ta.select();
+        try{document.execCommand('copy');}catch(e){} document.body.removeChild(ta); return;
+      }
+      navigator.clipboard.writeText(text);
+    }
+    function escapeHtml(s){
+      return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
+    }
+
+    /* ---------- CSV preview ---------- */
+    async function loadCSV(path){
+      csvSpinner.style.display='block'; csvTableWrap.style.display='none'; csvError.classList.add('d-none');
+      csvThead.innerHTML=''; csvTbody.innerHTML='';
+      try{
+        const res=await fetch(path,{cache:'no-store'}); if(!res.ok) throw new Error('HTTP '+res.status);
+        const text=await res.text();
+        const rows=[]; let row=[],cell='',inQ=false;
+        for(let i=0;i<text.length;i++){const c=text[i],n=text[i+1];
+          if(c==='\"'){ if(inQ && n==='\"'){ cell+='\"'; i++; } else inQ=!inQ; }
+          else if(c===',' && !inQ){ row.push(cell); cell=''; }
+          else if((c==='\n'||c==='\r') && !inQ){ if(cell!==''||row.length){row.push(cell); rows.push(row); row=[]; cell='';} if(c==='\r'&&n==='\n') i++; }
+          else cell+=c;
+        }
+        if(cell!==''||row.length){ row.push(cell); rows.push(row); }
+        if(!rows.length) throw new Error('Empty CSV');
+        const header=rows[0], body=rows.slice(1);
+        csvThead.innerHTML=`<tr>${header.map(h=>`<th class="text-nowrap">${escapeHtml(h)}</th>`).join('')}</tr>`;
+        csvTbody.innerHTML=body.map(r=>`<tr>${r.map(v=>`<td>${escapeHtml(v)}</td>`).join('')}</tr>`).join('');
+        csvSpinner.style.display='none'; csvTableWrap.style.display='';
+      }catch(e){ csvSpinner.style.display='none'; csvError.classList.remove('d-none'); console.error(e); }
+    }
+
+    /* ---------- JSON preview ---------- */
+    async function loadJSON(path,title){
+      jsonSpinner.classList.remove('d-none'); jsonPre.classList.add('d-none'); jsonError.classList.add('d-none'); jsonPre.textContent=''; jsonModalTitle.textContent=title||'JSON';
+      try{
+        const res=await fetch(path,{cache:'no-store'}); if(!res.ok) throw new Error('HTTP '+res.status);
+        const data=await res.json(); jsonPre.textContent=JSON.stringify(data,null,2);
+        jsonSpinner.classList.add('d-none'); jsonPre.classList.remove('d-none');
+      }catch(e){ console.error(e); jsonSpinner.classList.add('d-none'); jsonError.classList.remove('d-none'); }
+    }
+
+    /* ---------- SHA-256 (local) ---------- */
+    async function computeSHA256(url,outSelector,btnEl){
+      try{
+        if(btnEl){btnEl.disabled=true; btnEl.textContent='Computing…';}
+        const res=await fetch(url,{cache:'no-store'}); if(!res.ok) throw new Error('HTTP '+res.status);
+        const buf=await res.arrayBuffer(); const hashBuffer=await crypto.subtle.digest('SHA-256',buf);
+        const hashArray=Array.from(new Uint8Array(hashBuffer)); const hex=hashArray.map(b=>b.toString(16).padStart(2,'0')).join('');
+        document.querySelector(outSelector).textContent=hex;
+      }catch(e){ console.error(e); document.querySelector(outSelector).textContent='Unable to compute (check file path / CORS)'; }
+      finally{ if(btnEl){btnEl.disabled=false; btnEl.textContent='Compute';} }
+    }
+
+    /* ---------- IPFS verify ---------- */
+    const IPFS_CID='bafkreiefl742m4antxq6mocbztzi6eqzwq45q3qm7p2o3ktv22f4torjc4';
+    const GW_CUSTOM='https://harlequin-dear-capybara-57.mypinata.cloud/ipfs/'+IPFS_CID;
+    const GW_DWEB='https://'+IPFS_CID+'.ipfs.dweb.link';
+    const GW_PINATA='https://gateway.pinata.cloud/ipfs/'+IPFS_CID;
+    const GW_IPFSIO='https://ipfs.io/ipfs/'+IPFS_CID;
+    let bestPdfURL=null;
+
+    function setBadgeEl(id,text,cls){ const el=document.getElementById(id); if(!el) return; el.className='badge ms-1 '+cls; el.textContent=text; }
+    function disableLink(id){ const a=document.getElementById(id); if(!a) return; a.classList.add('disabled'); a.setAttribute('aria-disabled','true'); a.setAttribute('tabindex','-1'); a.style.pointerEvents='none'; }
+    function markOpenViewer(label,url){ bestPdfURL=url; const btn=document.getElementById('openViewerBtn'); if(btn) btn.textContent='Open in Viewer ('+label+')'; }
+
+    async function classifyGateway(url){
+      try{ const h=await fetch(url,{method:'HEAD',cache:'no-store'}); if(h.ok){ const ct=(h.headers.get('content-type')||'').toLowerCase(); if(ct.includes('pdf')) return 'inline'; return 'download'; } }catch(_){}
+      try{ const r=await fetch(url,{headers:{'Range':'bytes=0-1023'},cache:'no-store'}); if(r.ok||r.status===206){ const ct=(r.headers.get('content-type')||'').toLowerCase(); if(ct.includes('pdf')) return 'inline'; return 'download'; } }catch(_){}
+      return 'fail';
+    }
+    async function verifyGateways(){
+      const order=[{link:'ipfsCustomLink',badge:'badgeCustom',url:GW_CUSTOM,label:'Custom'},{link:'ipfsDwebLink',badge:'badgeDweb',url:GW_DWEB,label:'dweb.link'},{link:'ipfsPinataLink',badge:'badgePinata',url:GW_PINATA,label:'Pinata'},{link:'ipfsPublicLink',badge:'badgePublic',url:GW_IPFSIO,label:'ipfs.io'}];
+      for(const g of order){
+        setBadgeEl(g.badge,'checking…','bg-secondary'); const status=await classifyGateway(g.url);
+        if(status==='inline'){ setBadgeEl(g.badge,'Verified (inline)','bg-success'); if(!bestPdfURL) markOpenViewer(g.label,g.url);}
+        else if(status==='download'){ setBadgeEl(g.badge,'Reachable (download)','bg-warning'); if(!bestPdfURL) markOpenViewer(g.label,g.url);}
+        else{ setBadgeEl(g.badge,'Unavailable','bg-danger'); disableLink(g.link); }
+      }
+      if(!bestPdfURL) markOpenViewer('local','./docs/Audit_Report.pdf');
+    }
+
+    /* ---------- PDF viewer ---------- */
+    function openPdfViewer(url,title){
+      const frame=pdfFrame, spinner=pdfSpinner, err=pdfError, link=pdfOpenInTab, titleEl=pdfModalTitle;
+      spinner.style.display='block'; err.classList.add('d-none'); frame.style.display='none';
+      frame.onload=()=>{spinner.style.display='none'; frame.style.display='block';};
+      frame.onerror=()=>{spinner.style.display='none'; err.classList.remove('d-none');};
+      frame.src=url; link.href=url; titleEl.textContent=title||'PDF Viewer';
+    }
+
+    /* ---------- Init ---------- */
+    document.addEventListener('DOMContentLoaded',()=>{
+      verifyGateways();
+      computeSHA256('./docs/Audit_Report.pdf','#auditHash'); // SHA-256 locale del PDF hostato
+      const btn=document.getElementById('openViewerBtn');
+      if(btn) btn.addEventListener('click',()=>openPdfViewer(bestPdfURL||'./docs/Audit_Report.pdf','Audit Report'));
+    });
+  </script>
+</body>
+</html>
