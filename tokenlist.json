@@ -1,0 +1,15 @@
+{
+  "name": "USDTz List",
+  "timestamp": "2025-10-07T00:00:00+00:00",
+  "version": { "major": 1, "minor": 0, "patch": 0 },
+  "tokens": [
+    {
+      "chainId": 56,
+      "address": "0x86e7C48432fE2f98ABc6aDcA0aF87847Ab5542ce",
+      "name": "USDT.z",
+      "symbol": "USDTz",
+      "decimals": 6,
+      "logoURI": "https://usdt-z.cloud/assets/img/usdtz-256.png"
+    }
+  ]
+}

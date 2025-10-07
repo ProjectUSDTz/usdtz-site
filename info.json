@@ -1,0 +1,22 @@
+{
+  "name": "USDT.z",
+  "symbol": "USDTz",
+  "type": "BEP20",
+  "decimals": 6,
+  "description": "USDT.z (USDTz) è un token stable-oriented per operazioni OTC/collaterali su BNB Smart Chain. Non affiliato a Tether/USDT.",
+  "website": "https://usdt-z.cloud",
+  "explorer": "https://bscscan.com/token/0x86e7C48432fE2f98ABc6aDcA0aF87847Ab5542ce",
+  "status": "active",
+  "id": "0x86e7C48432fE2f98ABc6aDcA0aF87847Ab5542ce",
+  "links": [
+    {
+      "name": "coinmarketcap",
+      "url": "https://dex.coinmarketcap.com/token/bsc/0x86e7c48432fe2f98abc6adca0af87847ab5542ce/"
+    },
+    {
+      "name": "docs",
+      "url": "https://usdt-z.cloud"
+    }
+  ],
+  "tags": ["stablecoin"]
+}
