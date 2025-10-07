@@ -1,0 +1,15 @@
+/* TEAM */
+Single maintainer (web designer; website & token operations)
+Contact: info@usdt-z.cloud
+GitHub: https://github.com/ProjectUSDTZ
+
+/* PROJECT */
+Token: USDT.z (USDTz) — BSC BEP-20
+Contract: 0x86e7C48432fE2f98ABc6aDcA0aF87847Ab5542ce
+Transparency: https://www.usdt-z.cloud/transparency
+Supply API: https://www.usdt-z.cloud/api/circulating_supply.json
+Audit (IPFS): https://harlequin-dear-capybara-57.mypinata.cloud/ipfs/bafkreiefl742m4antxq6mocbztzi6eqzwq45q3qm7p2o3ktv22f4torjc4
+
+/* POLICY */
+OTC & collateral only; price-discovery only (no MM); no taxes/blacklist; Pausable + Permit (EIP-2612)
+Non-affiliation: not affiliated with Tether (USDT) or USDtez (USDTZ). On-chain > docs.
