@@ -12,12 +12,8 @@ description: >-
 * Uploaded audit to IPFS (CID: ).
 * Linked from Home, Documentation → Transparency/Security, and the official website.
 
-Versioned log of updates to USDT.z docs, transparency datasets, API endpoints, and security status. Entries include date and scope. On-chain data is authoritative.**2025-10-02 — Audit**
-
-* Uploaded audit to IPFS (CID: ).
-* Linked from Home, Documentation → Transparency/Security, and the official website.
-
-> Reverse-chronological updates to USDT.z (USDTz) documentation and official references. On-chain data is authoritative; any DEX reference is for price discovery only.
+> Reverse-chronological updates to USDT.z (USDTz) documentation and official references.\
+> On-chain data is authoritative; any DEX reference is for price discovery only.
 
 **2025-10-08 — Domain proof**
 
