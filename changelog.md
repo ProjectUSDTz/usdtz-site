@@ -1,3 +1,10 @@
+---
+description: >-
+  Versioned log of updates to USDT.z docs, transparency datasets, API endpoints,
+  and security status. Entries include date and scope. On-chain data is
+  authoritative; no token economics are changed unles
+---
+
 # Changelog
 
 New updates and improvements​
@@ -44,7 +51,3 @@ New updates and improvements​
 * Initial docs scaffold created.
 
 ***
-
-**Short “Section Description” (da mettere nella scheda&#x20;**_**Changelog → Description**_**, ≤256 char)**
-
-`Versioned log of updates to USDT.z docs, transparency datasets, API endpoints, and security status. Entries include date and scope. On-chain data is authoritative; no token economics are changed unless explicitly stated.`
