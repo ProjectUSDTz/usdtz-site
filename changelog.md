@@ -1,8 +1,8 @@
 ---
 description: >-
-  Versioned log of updates to USDT.z docs, transparency datasets, API endpoints,
-  and security status. Entries include date and scope. On-chain data is
-  authoritative; no token economics are changed unles
+  Reverse-chronological updates to USDT.z (USDTz) documentation and official
+  references. On-chain data is authoritative; any DEX reference is for price
+  discovery only.
 ---
 
 # Changelog
